@@ -1,0 +1,58 @@
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
+
+GPIO0 = 3
+GPIO1 = 5
+GPIO2 = 3
+GPIO3 = 5
+GPIO4 = 7
+
+GPIO7 = 26
+GPIO8 = 24
+GPIO9 = 21
+GPIO10 = 19
+GPIO11 = 23
+
+GPIO14 = 8
+GPIO15 = 10
+
+GPIO17 = 11
+GPIO18 = 12
+
+GPIO21 = 13
+GPIO22 = 15
+GPIO23 = 16
+GPIO24 = 18
+GPIO25 = 22
+
+GPIO27 = 13
+GPIO28 = 3
+GPIO29 = 18
+GPIO30 = 5
+GPIO31 = 6 
+
+def LED(i,value):
+	if value == 0:
+		GPIO.output(i,GPIO.LOW)
+	else:
+		GPIO.output(i,GPIO.HIGH)
+def OUT(i):
+	GPIO.setup(i, GPIO.OUT)
+
+OUT(GPIO4)
+OUT(GPIO17)
+OUT(GPIO25)
+
+while True:
+	LED(GPIO4,1)
+	LED(GPIO17,1)
+	LED(GPIO25,1)
+	time.sleep(0.5)
+	LED(GPIO4,0)
+	LED(GPIO17,0)
+	LED(GPIO25,0)
+
+
