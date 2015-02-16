@@ -3,3 +3,4 @@ sudo apt-get upgrade
 sudo apt-get install python-dev
 sudo apt-get install python-rpi.gpio 
 sudo apt-get install python-alsaaudio
+sudo apt-get install python-pyaudio
